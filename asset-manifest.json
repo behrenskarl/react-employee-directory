@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/behrenskarl/react-employee-directory/static/css/main.ab7136cd.chunk.css",
+    "main.js": "/behrenskarl/react-employee-directory/static/js/main.4e5ebe45.chunk.js",
+    "main.js.map": "/behrenskarl/react-employee-directory/static/js/main.4e5ebe45.chunk.js.map",
+    "runtime-main.js": "/behrenskarl/react-employee-directory/static/js/runtime-main.b6a437b2.js",
+    "runtime-main.js.map": "/behrenskarl/react-employee-directory/static/js/runtime-main.b6a437b2.js.map",
+    "static/js/2.e3c1e8c4.chunk.js": "/behrenskarl/react-employee-directory/static/js/2.e3c1e8c4.chunk.js",
+    "static/js/2.e3c1e8c4.chunk.js.map": "/behrenskarl/react-employee-directory/static/js/2.e3c1e8c4.chunk.js.map",
+    "static/js/3.73193532.chunk.js": "/behrenskarl/react-employee-directory/static/js/3.73193532.chunk.js",
+    "static/js/3.73193532.chunk.js.map": "/behrenskarl/react-employee-directory/static/js/3.73193532.chunk.js.map",
+    "index.html": "/behrenskarl/react-employee-directory/index.html",
+    "static/css/main.ab7136cd.chunk.css.map": "/behrenskarl/react-employee-directory/static/css/main.ab7136cd.chunk.css.map",
+    "static/js/2.e3c1e8c4.chunk.js.LICENSE.txt": "/behrenskarl/react-employee-directory/static/js/2.e3c1e8c4.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/behrenskarl/react-employee-directory/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6a437b2.js",
+    "static/js/2.e3c1e8c4.chunk.js",
+    "static/css/main.ab7136cd.chunk.css",
+    "static/js/main.4e5ebe45.chunk.js"
+  ]
+}
