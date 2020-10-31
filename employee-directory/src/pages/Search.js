@@ -10,13 +10,6 @@ class Search extends Component {
         error: ""
     };
 
-
-    componentDidMount() {
-        API.getEmployeeList()
-        .then(res => this.setState({ employees: res.data.message }))
-        .catch(err => console.log(err));
-    };
-
     handleInputChange = event => {
         this.setState({ search: event.target.value });
     };
