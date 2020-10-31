@@ -8,6 +8,7 @@ class Table extends Component {
         super(props); 
         this.state = { 
             employees: [],
+            search: ""
         }
     };
 
@@ -18,6 +19,10 @@ class Table extends Component {
             .catch(err => console.log(err));
     };
     
+    handleInputChange = event => {
+        this.setState({ search: event.target.value });
+        // console.log(event.target.value);
+    };
 
     render() {
         // console.log(this.state);
@@ -26,14 +31,21 @@ class Table extends Component {
         else {
             return (
                 // <div>Hello World!</div>
-                <table>
-                    <tr>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Cell Phone</th>
-                    </tr>
-                    {this.state.employees.map((employee) => <TableRow employee={employee} /> )}
-                </table>
+                <>
+                    <div>
+                       <input placeholder="Search..." onChange={(event) => this.handleInputChange(event)}/> 
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Cell Phone</th>
+                        </tr>
+                        {this.state.employees
+                            .filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
+                            .map((employee) => <TableRow employee={employee} /> )}
+                    </table>
+                </>
             )
         }
     };
