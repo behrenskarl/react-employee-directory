@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Search from "../components/Search";
+import Table from "../components/Table";
+import TableRow from "../components/TableRows";
 
-
-class Search extends Component {
+class Directory extends Component {
     state = {
         search: "",
         employees: [],
@@ -26,10 +28,13 @@ class Search extends Component {
         .catch(err => this.setState({ error: err.message }))
     };
     render() {
-        return 
+        return (
+            <div>
+                <Search />
+                <Table />
+            </div>
+        )
+    };
+};
 
-        
-      }
-}
-
-export default Search;
+export default Directory;

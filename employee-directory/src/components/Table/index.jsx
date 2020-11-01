@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import TableRow from "../TableRows";
-import Image from "../Image";
+
 
 class Table extends Component {
 
@@ -33,9 +33,9 @@ class Table extends Component {
             return (
                 // <div>Hello World!</div>
                 <>
-                    <div>
+                    {/* <div>
                        <input placeholder="Search..." onChange={(event) => this.handleInputChange(event)}/> 
-                    </div>
+                    </div> */}
                     <table class="table table-hover table-dark">
                         <tr>
                             <th scope="row">Image</th>

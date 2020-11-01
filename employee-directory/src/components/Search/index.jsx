@@ -1,13 +1,16 @@
 import React, { Component } from "react";
-import API from "../utils/API";
+
 
 
 class Search extends Component {
-    state = {
-        search: "",
-        error: ""
-    };
 
+    constructor(props) {
+        super(props); 
+        this.state = { 
+            employees: [],
+            search: ""
+        }
+    };
     handleInputChange = event => {
         this.setState({ search: event.target.value });
     };
@@ -24,11 +27,13 @@ class Search extends Component {
     //     .catch(err => this.setState({ error: err.message }))
     // };
 
-    
-    render() {
-        return 
 
-        
+    render() {
+        return (
+            <div>
+                <input placeholder="Search..." onChange={(event) => this.handleInputChange(event)}/> 
+            </div>
+        )
       }
 }
 
