@@ -36,7 +36,7 @@ class Table extends Component {
                     {/* <div>
                        <input placeholder="Search..." onChange={(event) => this.handleInputChange(event)}/> 
                     </div> */}
-                    <table class="table table-hover table-dark">
+                    <table className="table table-hover table-dark">
                         <tr>
                             <th scope="row">Image</th>
                             <th scope="row">First Name</th>
@@ -45,7 +45,7 @@ class Table extends Component {
                             <th scope="row">Cell Phone</th>
                         </tr>
                         {this.state.employees
-                            .filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
+                            // .filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
                             .map((employee) => <TableRow employee={employee} /> )}
                     </table>
                 </>

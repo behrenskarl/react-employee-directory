@@ -5,12 +5,19 @@ import Table from "../components/Table";
 import TableRow from "../components/TableRows";
 
 class Directory extends Component {
-    state = {
-        search: "",
-        employees: [],
-        results: [],
-        error: ""
-    };
+    // state = {
+    //     search: "",
+    //     employees: [],
+    //     results: [],
+    //     error: ""
+    // };
+
+    // componentDidMount() {
+    //     API.getUsers()
+    //         .then(res => this.setState({ employees: res.data.results }))
+    //         // .then(res => console.log(res))
+    //         .catch(err => console.log(err));
+    // };
 
     handleInputChange = event => {
         this.setState({ search: event.target.value });
@@ -28,12 +35,18 @@ class Directory extends Component {
         .catch(err => this.setState({ error: err.message }))
     };
     render() {
-        return (
-            <div>
-                <Search />
-                <Table />
-            </div>
-        )
+            return (
+                <div>
+
+                    <Search />
+                    <Table />
+                    {/* {this.state.employees
+                        .filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
+                        // .map((employee) => <TableRow employee={employee} /> )}
+                    } */}
+
+                </div>
+            )
     };
 };
 
