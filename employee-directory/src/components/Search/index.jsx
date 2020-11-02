@@ -35,10 +35,10 @@ class Search extends Component {
         return (
             <div>
                 <input placeholder="Search..." onChange={(event) => this.handleInputChange(event)}/> 
-                {this.state.employees
+                {/* {this.state.employees
                             .filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
-                            // .map((employee) => <TableRow employee={employee} /> )}
-                }
+                            .map((employee) => <TableRow employee={employee} /> )}
+                 */}
             </div>
         )
       }

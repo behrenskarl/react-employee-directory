@@ -1,16 +1,17 @@
 import React, { Component } from "react";
+
 import API from "../utils/API";
 import Search from "../components/Search";
 import Table from "../components/Table";
 import TableRow from "../components/TableRows";
 
 class Directory extends Component {
-    // state = {
-    //     search: "",
-    //     employees: [],
-    //     results: [],
-    //     error: ""
-    // };
+    state = {
+        search: "",
+        employees: [],
+        results: [],
+        error: ""
+    };
 
     // componentDidMount() {
     //     API.getUsers()
@@ -34,16 +35,23 @@ class Directory extends Component {
         })
         .catch(err => this.setState({ error: err.message }))
     };
+
+    dynamicSearch = () => {
+        return this.state.employees.filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
+    };
+
     render() {
             return (
                 <div>
 
-                    <Search />
-                    <Table />
+                    <Search employees = {this.dynamicSearch}/>
+
                     {/* {this.state.employees
                         .filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
-                        // .map((employee) => <TableRow employee={employee} /> )}
-                    } */}
+                        .map((employee) => <TableRow employee={employee} /> )}  */}
+                    
+                    <Table />
+                    {/* <TableRow /> */}
 
                 </div>
             )

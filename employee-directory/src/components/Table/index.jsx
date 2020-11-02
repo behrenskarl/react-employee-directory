@@ -25,6 +25,10 @@ class Table extends Component {
         // console.log(event.target.value);
     };
 
+    dynamicSearch = () => {
+        return this.state.employees.filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
+    };
+
     render() {
         // console.log(this.state);
         if (this.state.employees.length === 0)
@@ -33,9 +37,10 @@ class Table extends Component {
             return (
                 // <div>Hello World!</div>
                 <>
-                    {/* <div>
+                    {/* {<div>
                        <input placeholder="Search..." onChange={(event) => this.handleInputChange(event)}/> 
-                    </div> */}
+                    </div>} */}
+
                     <table className="table table-hover table-dark">
                         <tr>
                             <th scope="row">Image</th>
@@ -45,9 +50,11 @@ class Table extends Component {
                             <th scope="row">Cell Phone</th>
                         </tr>
                         {this.state.employees
-                            // .filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
+                            .filter((employee) => Object.values(employee).some((field) => field.includes(this.state.search)))
                             .map((employee) => <TableRow employee={employee} /> )}
+                        
                     </table>
+
                 </>
             )
         }
